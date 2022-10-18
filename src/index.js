@@ -26,7 +26,7 @@ function onInput(event) {
   //+ а разметка списка стран или информации о стране пропадает.
   countryDataWrapper.innerHTML = '';
   countriesList.innerHTML = '';
-  if (event.target.value === '') {
+  if (event.target.value === '' || event.target.value.match(/\s/)) {
     return;
   }
   //+ Выполни санитизацию введенной строки методом trim(), это решит проблему когда в поле ввода только пробелы или они есть в начале и в конце строки.
